@@ -1,0 +1,101 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Country</title>
+    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <form method="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <span>Name</span>
+                    <input type="text" asp.for="Name1" />
+                </div>
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Nmae</th>
+                            <td>Acton</td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <input type="button" asp.action="reserch" value="reserch"/>
+            </div>
+
+            <div class="row">
+                New contry
+                <div class="col-6">
+                    <span>Code</span>
+                    <input type="text" asp.for="save1" />
+
+                    <span>Name</span>
+                    <input type="text" asp.for="save2" />
+                </div>
+                <input type="button" value="save" asp-.item="save1,save2" />
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Amman</td>
+                            <td>Delete</td>
+
+                        </tr>
+
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>Aqaba</td>
+                            <td>Delete</td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+            <div class="row">
+                New City
+                <div class="col-6">
+                    <span>Name</span>
+                    <input type="text" asp.for="Newcountry" />
+
+                    <span>Name</span>
+                    <select asp.items="Newcountry">
+                        <option>
+                        </option>
+                    </select>
+                </div>
+                <input type="button" asp.action="Newcountry" value="save" />
+
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>
